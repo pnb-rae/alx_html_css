@@ -1,0 +1,23 @@
+# SmileSchool - CSS Styling Project
+
+## Project Description
+A responsive landing page for SmileSchool, implementing advanced CSS techniques based on a Figma design. Focuses on proper styling, layout, and responsiveness.
+
+## Key Features
+- **Professional header** with navigation
+- **Hero section** with call-to-action
+- **Instructor profiles** with achievements
+- **Video testimonial** section
+- **Tutorial cards** with star ratings
+- **Membership benefits** grid
+- **FAQ accordion** section
+- **Footer** with social links
+
+## Technical Requirements
+✔ Pure HTML/CSS (no frameworks)  
+✔ W3C validated code  
+✔ Responsive design  
+✔ Proper image optimization  
+✔ External CSS only (no inline styles)  
+
+## File Structure
