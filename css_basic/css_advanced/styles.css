@@ -1,0 +1,296 @@
+/* styles.css */
+/* ===== GLOBAL STYLES ===== */
+:root {
+  /* Color Palette */
+  --primary-purple: #C271FF;
+  --purple-light: #D3A2F7;
+  --dark-blue: #071629;
+  --white: #FFFFFF;
+  --gray-light: #D3D3D3;
+  --star-yellow: #FFD700;
+
+  /* Spacing */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 64px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: var(--dark-blue);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Spin Cycle OT', sans-serif;
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: var(--dark-blue);
+  padding: var(--space-md) 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-sm);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: var(--space-lg);
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  background: linear-gradient(to right, var(--dark-blue), var(--primary-purple));
+  color: var(--white);
+  text-align: center;
+  padding: 180px 0 100px;
+  margin-top: 80px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.hero span {
+  display: inline-block;
+  margin: 0 var(--space-xs);
+  font-weight: 700;
+}
+
+.hero button {
+  background-color: var(--primary-purple);
+  color: var(--white);
+  border: none;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: 50px;
+  font-weight: 700;
+  margin-top: var(--space-md);
+  cursor: pointer;
+}
+
+/* ===== PROS SECTION ===== */
+.pros {
+  text-align: center;
+  padding: var(--space-lg) 0;
+}
+
+.pros h2 {
+  color: var(--primary-purple);
+  margin-bottom: var(--space-lg);
+}
+
+.pros-grid {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pro-card {
+  width: 200px;
+}
+
+.pro-card img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: var(--space-sm);
+}
+
+/* ===== TESTIMONIAL ===== */
+.testimonial {
+  background-color: var(--primary-purple);
+  color: var(--white);
+  padding: var(--space-lg) 0;
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-content {
+  max-width: 600px;
+  margin-left: var(--space-lg);
+}
+
+.testimonial blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: var(--space-sm);
+}
+
+/* ===== TUTORIALS ===== */
+.tutorials {
+  padding: var(--space-lg) 0;
+  text-align: center;
+}
+
+.tutorials h2 {
+  margin-bottom: var(--space-lg);
+}
+
+.tutorials-grid {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tutorial-card {
+  width: 280px;
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tutorial-info {
+  padding: var(--space-sm);
+  text-align: left;
+}
+
+.tutor {
+  display: flex;
+  align-items: center;
+  margin: var(--space-sm) 0;
+}
+
+.tutor img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: var(--space-xs);
+}
+
+.rating {
+  color: var(--star-yellow);
+  margin: var(--space-xs) 0;
+}
+
+/* ===== MEMBERSHIP ===== */
+.membership {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  padding: var(--space-lg) 0;
+  text-align: center;
+}
+
+.membership h2 {
+  margin-bottom: var(--space-lg);
+}
+
+.benefits {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.benefit-card {
+  width: 200px;
+}
+
+.benefit-card img {
+  height: 60px;
+  margin-bottom: var(--space-sm);
+}
+
+/* ===== FAQ ===== */
+.faq {
+  padding: var(--space-lg) 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faq h2 {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.faq-grid {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.faq-column {
+  flex: 1;
+}
+
+.faq-item {
+  margin-bottom: var(--space-md);
+}
+
+.faq-item h3 {
+  margin-bottom: var(--space-sm);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  padding: var(--space-lg) 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-icons {
+  margin: var(--space-md) 0;
+}
+
+.social-icons i {
+  font-size: 1.5rem;
+  margin: 0 var(--space-sm);
+  cursor: pointer;
+}
+
+/* ===== UTILITY CLASSES ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-sm);
+}
+
+.text-center {
+  text-align: center;
+}
