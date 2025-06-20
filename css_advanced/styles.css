@@ -39,6 +39,13 @@ img {
   display: block;
 }
 
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
 /* ===== HEADER ===== */
 header {
   background-color: var(--dark-blue);
@@ -59,7 +66,7 @@ nav {
 }
 
 nav img {
-  width: 120px; /* Adjust as per Figma */
+  width: 120px;
 }
 
 nav ul {
@@ -74,7 +81,6 @@ nav a {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.8rem;
-  transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -87,7 +93,7 @@ nav a:hover {
   color: var(--white);
   text-align: center;
   padding: 180px var(--space-sm) 100px;
-  margin-top: 80px; /* to offset fixed header */
+  margin-top: 80px;
 }
 
 .hero h1 {
@@ -105,13 +111,10 @@ nav a:hover {
 .hero button {
   background-color: var(--primary-purple);
   color: var(--white);
-  border: none;
   padding: var(--space-sm) var(--space-lg);
   border-radius: 50px;
   font-weight: 700;
   margin-top: var(--space-md);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .hero button:hover {
@@ -121,7 +124,7 @@ nav a:hover {
 /* ===== PROS SECTION ===== */
 .pros {
   text-align: center;
-  padding: var(--space-lg) 0;
+  padding: var(--space-lg) var(--space-sm);
 }
 
 .pros h2 {
@@ -154,11 +157,12 @@ nav a:hover {
 .testimonial {
   background-color: var(--primary-purple);
   color: var(--white);
-  padding: var(--space-lg) 0;
+  padding: var(--space-lg) var(--space-sm);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: var(--space-lg);
 }
 
 .testimonial img {
@@ -168,18 +172,29 @@ nav a:hover {
 
 .testimonial-content {
   max-width: 600px;
-  padding: var(--space-sm);
+  text-align: left;
 }
 
 .testimonial blockquote {
   font-size: 1.2rem;
   font-style: italic;
   margin-bottom: var(--space-sm);
+  line-height: 1.4;
+}
+
+.testimonial h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.testimonial p {
+  font-size: 0.85rem;
+  opacity: 0.9;
 }
 
 /* ===== TUTORIALS ===== */
 .tutorials {
-  padding: var(--space-lg) 0;
+  padding: var(--space-lg) var(--space-sm);
   text-align: center;
 }
 
@@ -231,7 +246,7 @@ nav a:hover {
 .membership {
   background-color: var(--dark-blue);
   color: var(--white);
-  padding: var(--space-lg) 0;
+  padding: var(--space-lg) var(--space-sm);
   text-align: center;
 }
 
@@ -256,9 +271,30 @@ nav a:hover {
   margin-bottom: var(--space-sm);
 }
 
+.benefit-card h3 {
+  font-size: 1rem;
+  margin-bottom: var(--space-xs);
+}
+
+.benefit-card p {
+  font-size: 0.85rem;
+}
+
+.membership button {
+  background-color: var(--primary-purple);
+  color: var(--white);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+.membership button:hover {
+  background-color: var(--purple-light);
+}
+
 /* ===== FAQ ===== */
 .faq {
-  padding: var(--space-lg) 0;
+  padding: var(--space-lg) var(--space-sm);
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -266,6 +302,7 @@ nav a:hover {
 .faq h2 {
   text-align: center;
   margin-bottom: var(--space-lg);
+  color: var(--primary-purple);
 }
 
 .faq-grid {
@@ -281,23 +318,31 @@ nav a:hover {
 
 .faq-item {
   margin-bottom: var(--space-md);
+  background: var(--gray-light);
+  padding: var(--space-sm);
+  border-radius: 8px;
 }
 
 .faq-item h3 {
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
+  font-size: 1rem;
+}
+
+.faq-item p {
+  font-size: 0.9rem;
 }
 
 /* ===== FOOTER ===== */
 footer {
   background-color: var(--dark-blue);
   color: var(--white);
-  padding: var(--space-lg) 0;
+  padding: var(--space-lg) var(--space-sm);
   text-align: center;
 }
 
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
+footer img {
+  width: 100px;
+  margin: 0 auto var(--space-sm);
 }
 
 .social-icons {
@@ -308,6 +353,16 @@ footer {
   font-size: 1.5rem;
   margin: 0 var(--space-sm);
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: var(--primary-purple);
+}
+
+footer p {
+  font-size: 0.8rem;
+  opacity: 0.8;
 }
 
 /* ===== UTILITY CLASSES ===== */
@@ -320,3 +375,6 @@ footer {
 .text-center {
   text-align: center;
 }
+
+
+
