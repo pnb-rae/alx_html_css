@@ -1,4 +1,3 @@
-/* styles.css */
 /* ===== GLOBAL STYLES ===== */
 :root {
   /* Color Palette */
@@ -17,15 +16,16 @@
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
   color: var(--dark-blue);
   line-height: 1.6;
+  background: var(--white);
 }
 
 h1, h2, h3, h4 {
@@ -36,12 +36,13 @@ h1, h2, h3, h4 {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 /* ===== HEADER ===== */
 header {
   background-color: var(--dark-blue);
-  padding: var(--space-md) 0;
+  padding: var(--space-sm) 0;
   position: fixed;
   width: 100%;
   top: 0;
@@ -57,9 +58,13 @@ nav {
   padding: 0 var(--space-sm);
 }
 
+nav img {
+  width: 120px; /* Adjust as per Figma */
+}
+
 nav ul {
-  display: flex;
   list-style: none;
+  display: flex;
   gap: var(--space-lg);
 }
 
@@ -69,6 +74,11 @@ nav a {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--primary-purple);
 }
 
 /* ===== HERO SECTION ===== */
@@ -76,8 +86,8 @@ nav a {
   background: linear-gradient(to right, var(--dark-blue), var(--primary-purple));
   color: var(--white);
   text-align: center;
-  padding: 180px 0 100px;
-  margin-top: 80px;
+  padding: 180px var(--space-sm) 100px;
+  margin-top: 80px; /* to offset fixed header */
 }
 
 .hero h1 {
@@ -89,6 +99,7 @@ nav a {
   display: inline-block;
   margin: 0 var(--space-xs);
   font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .hero button {
@@ -100,6 +111,11 @@ nav a {
   font-weight: 700;
   margin-top: var(--space-md);
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: var(--purple-light);
 }
 
 /* ===== PROS SECTION ===== */
@@ -131,7 +147,7 @@ nav a {
   width: 150px;
   height: 150px;
   object-fit: cover;
-  margin-bottom: var(--space-sm);
+  margin: 0 auto var(--space-sm);
 }
 
 /* ===== TESTIMONIAL ===== */
@@ -140,12 +156,19 @@ nav a {
   color: var(--white);
   padding: var(--space-lg) 0;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+}
+
+.testimonial img {
+  width: 150px;
+  border-radius: 50%;
 }
 
 .testimonial-content {
   max-width: 600px;
-  margin-left: var(--space-lg);
+  padding: var(--space-sm);
 }
 
 .testimonial blockquote {
@@ -221,6 +244,7 @@ nav a {
   justify-content: center;
   gap: var(--space-lg);
   margin-bottom: var(--space-md);
+  flex-wrap: wrap;
 }
 
 .benefit-card {
@@ -246,11 +270,13 @@ nav a {
 
 .faq-grid {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--space-lg);
 }
 
 .faq-column {
   flex: 1;
+  min-width: 250px;
 }
 
 .faq-item {
